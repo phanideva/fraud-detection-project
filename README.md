@@ -1,10 +1,11 @@
-🏁 Installation & Setup
-1. Clone the Repository
+# 🏁 Installation & Setup
+<details>
+  <summary><strong>1️⃣ Clone the Repository</strong></summary>
 ```bash
 git clone https://github.com/phanideva/fraud-detection-gnn.git
 cd fraud-detection-gnn
 ```
-2. Set Up Virtual Environment
+</details> <details> <summary><strong>2️⃣ Set Up Virtual Environment</strong></summary>
 ```bash
 python -m venv venv
 ```
@@ -17,27 +18,27 @@ Activate the virtual environment:
     ```bash
     source venv/bin/activate
     ```
-3. Install Dependencies
+</details> <details> <summary><strong>3️⃣ Install Dependencies</strong></summary>
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Preprocess Data
+</details> <details> <summary><strong>4️⃣ Preprocess Data</strong></summary>
 ```bash
 python src/data_preprocessing.py
 ```
 
-5. Build Graph from Transactions
+</details> <details> <summary><strong>5️⃣ Build Graph from Transactions</strong></summary>
 ```bash
 python src/graph_construction.py
 ```
 
-6. Train the Model
+</details> <details> <summary><strong>6️⃣ Train the Model</strong></summary>
 ```bash
 python src/model_training.py
 ```
 
-7. Run the API Server
+</details> <details> <summary><strong>7️⃣ Run the API Server</strong></summary>
 ```bash
 uvicorn deployment.app:app --reload
 ```
@@ -45,7 +46,7 @@ uvicorn deployment.app:app --reload
 Once running, open:
     http://127.0.0.1:8000/docs - Swagger UI
     http://127.0.0.1:8000/redoc - Redoc UI
-
+</details>
 ⚙️ Deployment (Dockerized)
 To build and run the project using Docker:
 ```bash

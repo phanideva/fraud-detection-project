@@ -1,16 +1,23 @@
 # Project Overview:<br>
 This Project is an AI-powered fraud detection system that leverages Graph Neural Networks (GNNs) to detect fraudulent financial transactions based on relationships between users.<br>
 Instead of analyzing transactions individually, the project treats them as a graph, where:<br>
-  Nodes represents users (senders/receivers).<br>
-  Edges represent financial transactions between users.<br>
-  Edge weights represent the transaction amount.<br>
+  - Nodes represents users (senders/receivers).<br>
+  - Edges represent financial transactions between users.<br>
+  - Edge weights represent the transaction amount.<br>
 
 Why use Graph Neural Networks (GNNs) for Fraud Detection?<br>
 Fraud detection requires analyizing complex relationships between entities (eg., bank accounts).<br>
 Traditional machine learning methods struggle to capture these relationships, but GNNs can:<br>
-  Identify fraudulent patterns based on connections.<br>
-  Detect suspicious transaction flows in a network.<br>
-  Handle dynamic transaction patterns.<br>
+  - Identify fraudulent patterns based on connections.<br>
+  - Detect suspicious transaction flows in a network.<br>
+  - Handle dynamic transaction patterns.<br>
+  
+Technology Stack:<br>
+1. Programming Language: Python 🐍<br>
+2. Machine Learning Framework: PyTorch Geometric ⚙️<br>
+3. Web Framework: FastAPI ⚡<br>
+4. Containerization: Docker 🐳<br>
+5. CI/CD: GitHub Actions 🚀<br>
 
 # 🏁 Installation & Setup
 <details>

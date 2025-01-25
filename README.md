@@ -1,14 +1,18 @@
 # 🏁 Installation & Setup
 <details>
   <summary><strong>1️⃣ Clone the Repository</strong></summary>
+  
 ```bash
 git clone https://github.com/phanideva/fraud-detection-gnn.git
 cd fraud-detection-gnn
 ```
+
 </details> <details> <summary><strong>2️⃣ Set Up Virtual Environment</strong></summary>
+  
 ```bash
 python -m venv venv
 ```
+
 Activate the virtual environment:
     Windows:
     ```bash
@@ -19,26 +23,31 @@ Activate the virtual environment:
     source venv/bin/activate
     ```
 </details> <details> <summary><strong>3️⃣ Install Dependencies</strong></summary>
+  
 ```bash
 pip install -r requirements.txt
 ```
 
 </details> <details> <summary><strong>4️⃣ Preprocess Data</strong></summary>
+  
 ```bash
 python src/data_preprocessing.py
 ```
 
 </details> <details> <summary><strong>5️⃣ Build Graph from Transactions</strong></summary>
+  
 ```bash
 python src/graph_construction.py
 ```
 
 </details> <details> <summary><strong>6️⃣ Train the Model</strong></summary>
+  
 ```bash
 python src/model_training.py
 ```
 
 </details> <details> <summary><strong>7️⃣ Run the API Server</strong></summary>
+  
 ```bash
 uvicorn deployment.app:app --reload
 ```
@@ -67,11 +76,11 @@ This project includes a CI/CD pipeline to automate the following:<br>
 ✅ Building the Docker container<br>  
 ✅ Deploying the API<br>  
 
-🛠️ **Pipeline configuration:**<br>  
+## 🛠️ Pipeline configuration:<br>  
 The CI/CD setup can be found in the file:<br>  
 📂 `.github/workflows/ci-cd-pipeline.yml`
 
-📈 Example API Request
+## 📈 Example API Request
 Request (POST /predict/)
 ```json
 [[0.5, 0.2, 0.1, 0.9, 0.3, 0.7, 0.4, 0.6, 0.5, 0.8, 0.2, 0.4, 0.1, 0.9, 0.3, 0.7]]

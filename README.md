@@ -48,7 +48,7 @@ Once running, open:
     http://127.0.0.1:8000/redoc - Redoc UI
 </details>
 
-⚙️ Deployment (Dockerized)
+# ⚙️ Deployment (Dockerized)
 To build and run the project using Docker:
 ```bash
 docker build -t fraud-detection .
@@ -61,12 +61,15 @@ To run unit tests:
 pytest tests/
 ```
 
-🚀 CI/CD Pipeline (GitHub Actions)
-This project includes a CI/CD pipeline to automate:
-    1. Running tests
-    2. Building the Docker container
-    3. Deploying the API
-Pipeline configuration can be found in .github/workflows/ci-cd-pipeline.yml.
+# 🚀 CI/CD Pipeline (GitHub Actions)
+This project includes a CI/CD pipeline to automate the following:<br>  
+✅ Running tests<br>  
+✅ Building the Docker container<br>  
+✅ Deploying the API<br>  
+
+🛠️ **Pipeline configuration:**<br>  
+The CI/CD setup can be found in the file:<br>  
+📂 `.github/workflows/ci-cd-pipeline.yml`
 
 📈 Example API Request
 Request (POST /predict/)
@@ -78,13 +81,13 @@ Response
 {"prediction": 1}
 ```
 
-📚 Resources
-PyTorch Geometric
-FastAPI Documentation
-Docker Documentation
+# 📚 Resources
+PyTorch Geometric<br>
+FastAPI Documentation<br>
+Docker Documentation<br>
 
-👨‍💻 Author
-Phaneendra Devabhakthuni
-GitHub: @phanideva
-LinkedIn: Phaneendra Devabhakthuni
-Email: phanisaisri@gmail.com
+# 👨‍💻 Author
+Phaneendra Devabhakthuni<br>
+GitHub: @phanideva<br>
+LinkedIn: Phaneendra Devabhakthuni<br>
+Email: phanisaisri@gmail.com<br>

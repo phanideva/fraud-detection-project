@@ -152,6 +152,23 @@ The output graph will be saved as graph_data.pt.
     4. Start the API server:
         uvicorn deployment.app:app --reload
 
+    Running the Main Script:
+        You can execute the entire pipeline by running the fraud_detection.py script with different options.
+        Run the full pipeline:
+            python fraud_detection.py --all
+
+        Run individual steps:
+            Preprocess the data:
+                python fraud_detection.py --preprocess
+            Construct the transaction graph:
+                python fraud_detection.py --graph
+            Train the model:
+                python fraud_detection.py --train
+            Generate the EDA report:
+                python fraud_detection.py --eda
+            Deploy the API:
+                python fraud_detection.py --deploy
+
 📊 Results and Analysis
     - Fraudulent transactions constitute X% of total transactions.
     - High-value transactions tend to have a higher fraud risk.

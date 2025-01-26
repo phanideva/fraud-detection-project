@@ -1,0 +1,175 @@
+Fraud Detection Using Graph Neural Networks (GNNs) - Project Documentation
+
+📖 Table of Contents
+    1.  Introduction
+    2.  Project Structure
+    3.  Installation and Setup
+    4.  Data Description
+    5.  Exploratory Data Analysis (EDA)
+    6.  Graph Construction
+    7.  Model Training
+    8.  API Deployment
+    9.  CI/CD Pipeline
+    10. How to Run the Project
+    11. Results and Analysis
+    12. Future Work
+    13. Contributing
+    14. Contact
+
+📌 Introduction
+    Fraud detection is a critical challenge in financial transactions. This project utilizes Graph Neural Networks (GNNs) 
+    to detect fraudulent transactions by modeling relationships between entities such as senders and receivers. 
+    The project includes end-to-end processing, from data preprocessing to model deployment via a FastAPI service.
+
+📂 Project Structure
+
+    fraud-detection-project/
+    │-- data/
+    │   ├── raw_transactions.csv        # Raw input data
+    │   ├── processed_data.csv          # Processed data for graph construction
+    │-- models/
+    │   ├── gnn_model.pth               # Trained PyTorch GNN model
+    │-- deployment/
+    │   ├── app.py                       # FastAPI application for serving predictions
+    │   ├── Dockerfile                    # Docker containerization setup
+    │-- src/
+    │   ├── data_preprocessing.py         # Cleans and prepares data
+    │   ├── graph_construction.py         # Builds graph representation from transactions
+    │   ├── model_training.py             # Trains GNN model
+    │-- tests/
+    │   ├── test_api.py                    # API unit tests
+    │-- .github/
+    │   ├── workflows/
+    │       ├── ci-cd-pipeline.yml         # GitHub Actions CI/CD pipeline
+    │-- notebooks/
+    │   ├── EDA.ipynb                       # Exploratory data analysis notebook
+    │-- requirements.txt                     # Project dependencies
+    │-- README.md                            # Project documentation
+    │-- EDA_report.pdf                        # Generated report from EDA
+    │-- docker-compose.yml                    # Docker orchestration
+    │-- config.yaml                           # Configuration parameters
+    │-- fraud_detection.py                     # Main execution script
+
+⚙️ Installation and Setup
+    Prerequisites
+    Make sure you have the following installed:
+        Python (>= 3.8)
+        Git
+        Docker (optional for deployment)
+        Virtual environment tools (venv)
+
+1. Clone the Repository
+
+    git clone https://github.com/phanideva/fraud-detection-gnn.git
+    cd fraud-detection-gnn
+
+2. Set Up Virtual Environment
+
+    python -m venv venv
+
+    Activate the virtual environment:
+        Windows:
+            venv\Scripts\activate
+        Linux/macOS:
+            source venv/bin/activate
+
+3. Install Dependencies
+
+    pip install -r requirements.txt
+
+📊 Data Description
+    The dataset raw_transactions.csv contains the following columns:
+  ------------------------------------------------------------------------------------------
+  | Column	          |  Description	                                     |  Data Type  |
+  |-------------------|------------------------------------------------------|-------------|
+  |  Sender	          |  Unique ID of the sender	                         |  int        |
+  |  Receiver	      |  Unique ID of the receiver	                         |  int        |       
+  |  Amount	          |  Transaction amount	                                 |  float      |
+  |  Category	      |  Type of transaction (Groceries, Electronics, etc.)	 |  object     |
+  |  Transaction_Date |	Date of the transaction	                             |  object     |
+  |  Fraudulent	      |  1 (Fraud) / 0 (Not Fraud)	                         |  int        |
+  ------------------------------------------------------------------------------------------
+
+🔍 Exploratory Data Analysis (EDA)
+    The EDA process includes:
+        1. Data summary and missing value analysis
+        2. Fraud vs non-fraud visualization
+        3. Transaction trends over time
+        4. Feature correlations
+
+Run EDA Report Generation:
+    python src/data_preprocessing.py
+A detailed PDF report will be generated in the project directory.
+
+📐 Graph Construction
+The relationships between transactions are modeled as a graph where:
+    Nodes represent senders and receivers.
+    Edges represent transactions between them.
+
+Run Graph Construction:
+    python src/graph_construction.py
+The output graph will be saved as graph_data.pt.
+
+📈 Model Training
+    We utilize Graph Convolutional Networks (GCNs) from PyTorch Geometric to learn patterns and detect fraudulent activities.
+    Run Model Training:
+    python src/model_training.py
+    The trained model will be saved in the models/ directory.
+
+🚀 API Deployment
+    The trained model is deployed using FastAPI, enabling real-time fraud detection via REST APIs.
+
+    Run API Locally:
+    uvicorn deployment.app:app --reload
+
+    API Endpoints:
+    - Swagger UI: http://127.0.0.1:8000/docs
+    - Redoc: http://127.0.0.1:8000/redoc
+    - Prediction Endpoint: POST /predict/
+
+    Example JSON Input:
+        [[0.5, 0.2, 0.1, 0.9, 0.3, 0.7, 0.4, 0.6, 0.5, 0.8]]
+    
+🔄 CI/CD Pipeline
+
+    The project uses GitHub Actions for CI/CD. It automates the following:
+    1. Running tests
+    2. Building Docker images
+    3. Deploying the application
+    The workflow file is located at .github/workflows/ci-cd-pipeline.yml.
+
+🏃 How to Run the Project
+
+    1. Run EDA:
+        python src/data_preprocessing.py
+
+    2. Build the graph:
+        python src/graph_construction.py
+
+    3. Train the model:
+        python src/model_training.py
+
+    4. Start the API server:
+        uvicorn deployment.app:app --reload
+
+📊 Results and Analysis
+    - Fraudulent transactions constitute X% of total transactions.
+    - High-value transactions tend to have a higher fraud risk.
+    - Certain categories (e.g., Electronics) show higher fraud rates.
+
+🚧 Future Work
+    - Implementing real-time fraud detection using streaming data.
+    - Enhancing model performance with advanced GNN architectures.
+    - Deployment on cloud platforms (AWS/GCP/Azure).
+
+🤝 Contributing
+    Contributions are welcome! Follow these steps to contribute:
+    1. Fork the repository.
+    2. Create a feature branch.
+    3. Commit changes and submit a PR.
+
+📬 Contact
+    GitHub: @phanideva
+    LinkedIn: Phaneendra Devabhakthuni
+    Email: phanisaisri@gmail.com
+

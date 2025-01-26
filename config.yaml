@@ -1,0 +1,31 @@
+# Database Configuration
+database:
+  host: localhost
+  port: 5432
+  user: fraud_user
+  password: fraud_password
+  dbname: fraud_detection
+
+# Model Configuration
+model:
+  path: models/gnn_model.pth
+  input_features: 16
+  hidden_layers: 32
+  output_classes: 2
+
+# API Configuration
+api:
+  host: 0.0.0.0
+  port: 8000
+  debug: true
+
+# Logging Configuration
+logging:
+  level: INFO
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  log_file: logs/fraud_detection.log
+
+# Thresholds for Fraud Detection
+fraud_detection:
+  amount_threshold: 1000
+  fraud_probability_threshold: 0.7

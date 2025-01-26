@@ -1,13 +1,26 @@
-torch==2.0.0
-torch-geometric==2.3.0
+# PyTorch and PyG dependencies
+torch==2.0.1
+torch-geometric==2.3.1
 torch-scatter==2.1.2
-torch-sparse==0.6.17
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-fastapi
-uvicorn
-networkx
-pytest
+torch-sparse==0.6.18
+torch-cluster==1.6.3
+torch-spline-conv==1.2.2
+
+# Data processing and analysis
+pandas==1.5.3
+numpy==1.23.5
+scikit-learn==1.2.2
+
+# Visualization
+matplotlib==3.6.3
+seaborn==0.12.2
+
+# Web API
+fastapi==0.95.1
+uvicorn==0.22.0
+
+# Graph processing
+networkx==3.0
+
+# Testing
+pytest==7.2.2

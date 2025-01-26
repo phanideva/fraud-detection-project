@@ -24,8 +24,8 @@ Technology Stack:<br>
   <summary><strong>1️⃣ Clone the Repository</strong></summary>
   
 ```bash
-git clone https://github.com/phanideva/fraud-detection-gnn.git
-cd fraud-detection-gnn
+git clone https://github.com/phanideva/fraud-detection-project.git
+cd fraud-detection-project
 ```
 
 </details> <details> <summary><strong>2️⃣ Set Up Virtual Environment</strong></summary>
